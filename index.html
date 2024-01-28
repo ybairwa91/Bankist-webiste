@@ -7,77 +7,98 @@
     <title>INB | Banking in Your Pocket</title>
     <link rel="icon" href="images/transaction.png" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js " defer></script>
   </head>
 
-  <body>
-    <header class="header">
-      <!-- NavBar -->
-      <div class="nav">
-        <h2 class="nav__title">
-          <img
-            src="images/favicon.png"
-            alt="inb logo"
-            class="nav__logo"
-            id="logo"
-          />
-          <span>Indian National Bank </span>
-        </h2>
+  <body class="body">
+    <main class="main">
+      <header class="header">
+        <!-- NavBar -->
+        <div class="nav">
+          <h2 class="nav__title">
+            <img
+              src="images/favicon.png"
+              alt="inb logo"
+              class="nav__logo"
+              id="logo"
+            />
+            <span>Indian National Bank </span>
+          </h2>
 
-        <ul class="nav__links">
-          <li class="nav__item">
-            <a class="nav__link" href="#section--1"> Home </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#section--2"> E-services </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#section--3"> About us </a>
-          </li>
-          <li>
-            <a href="#" class="nav__link nav__link--btn btn-show modal"
-              >Open account</a
-            >
-          </li>
-        </ul>
-      </div>
-      <!-- Open account hidden panel -->
-      <div class="hidden">
-        <span class="hidden__close">X</span>
-        <h1>
-          Open your bank account in
-          <span class="highlight"> just 5 minutes </span>
-        </h1>
-        <form action="">
-          <div class="nav__account__input--form">
-            <label for="fname">First Name</label>
-            <input
-              type="text"
-              name="fname"
-              id="fname"
-              class="nav__account--input"
-            />
+          <ul class="nav__links">
+            <li class="nav__item">
+              <a class="nav__link" href="#section--1"> Home </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#section--2"> E-services </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#section--3"> About us </a>
+            </li>
+            <li>
+              <a href="#" class="nav__link nav__link--btn btn-show--modal"
+                >Open account</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- header-title-->
+        <div class="header__title">
+          <div class="headlines">
+            <h1>
+              When
+              <span class="highlight banking">Banking</span>
+              On Your
+              <span class="highlight fingers">FingerTips</span>
+            </h1>
+            <h4>A simpler banking experience for a simpler life.</h4>
+            <a href="#" class="learnMore">Learn more ↓</a>
           </div>
-          <div class="nav__account__input--form">
-            <label for="lname">Last Name</label>
-            <input
-              type="text"
-              name="lname"
-              id="lname"
-              class="nav__account--input"
-            />
-          </div>
-          <div class="nav__account__input--form">
-            <label for="email">Email Address</label>
-            <input
-              type="text"
-              name="email"
-              id="email"
-              class="nav__account--input"
-            />
-          </div>
-          <button class="nav__account__hidden--next">Next step</button>
-        </form>
-      </div>
-    </header>
+          <img src="images/upi.png" alt="" />
+        </div>
+      </header>
+    </main>
+
+    <!-- hidden part -->
+    <!-- Open account hidden panel -->
+    <div class="hidden">
+      <span class="hidden__close">X</span>
+      <h1>
+        Open your bank account in
+        <span class="highlight"> just 5 minutes </span>
+      </h1>
+      <form action="">
+        <div class="nav__account__input--form">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            class="nav__account--input"
+          />
+        </div>
+        <div class="nav__account__input--form">
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            class="nav__account--input"
+          />
+        </div>
+        <div class="nav__account__input--form">
+          <label for="email">Email Address</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="nav__account--input"
+          />
+        </div>
+        <button class="nav__account__hidden--next">Next step</button>
+      </form>
+    </div>
+    <!--  -->
   </body>
 </html>
