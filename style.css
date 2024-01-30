@@ -82,6 +82,7 @@ body {
   padding: 30px;
   opacity: 0;
   margin: -350px auto;
+  margin-top: -2700px;
 }
 .hidden h1 {
   width: 300px;
@@ -180,7 +181,7 @@ label {
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 150px;
-  row-gap: 50px;
+  row-gap: 30px;
   /* width: 00px; */
 }
 

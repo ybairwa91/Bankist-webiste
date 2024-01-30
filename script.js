@@ -24,17 +24,17 @@ const openForm = function () {
   hiddenForm.style.opacity = 100;
 };
 const closeForm = function () {
-  // hidden.style.opacity = 0;
-  // main.style.opacity = 100;
+  hiddenForm.style.opacity = 0;
+  main.style.opacity = 100;
   console.log("hi");
 };
-const handleFeatures = function (e) {
+const handleFeatures = function () {
   section1.scrollIntoView({ behavior: "smooth" });
 };
 
 //Events
 openAccount.addEventListener("click", openForm);
-hiddenClose.addEventListener("mousehover", closeForm);
+hiddenClose.addEventListener("click", closeForm);
 learnMore.addEventListener("click", handleFeatures);
 features.addEventListener("click", handleFeatures);
 
