@@ -162,7 +162,7 @@ label {
 
 /* section--1 */
 .section--1 {
-  margin: 150px;
+  margin: 0px 150px 150px 150px;
   width: 1000px;
 }
 
@@ -208,7 +208,6 @@ label {
   display: inline;
   color: #474747;
   font-size: medium;
- 
 }
 
 /* .grid-container p {

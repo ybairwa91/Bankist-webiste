@@ -1,15 +1,23 @@
 //selections
+//basic selections
 const body = document.querySelector(".body");
 const main = document.querySelector(".main");
+//nav selections
 const nav = document.querySelector(".nav");
+const learnMore = document.querySelector(".learnMore");
+const features = document.querySelector(".nav__features");
+const eServices = document.querySelector(".nav__e-service");
+const aboutUs = document.querySelector(".nav__aboutus");
+//open account selections
 const openAccount = document.querySelector(".btn-show--modal");
 const hiddenForm = document.querySelector(".hidden");
 const hiddenClose = document.querySelector(".hidden__close");
-const headertitle = document.querySelector(".header__title");
 const hidden = document.querySelector(".hidden");
+//header title selections
+const headertitle = document.querySelector(".header__title");
+//section--1[features]
 const section1 = document.querySelector(".section--1");
-const learnMore = document.querySelector(".learnMore");
-console.log(hiddenClose);
+
 //functions
 const openForm = function () {
   main.style.opacity = 0;
@@ -20,23 +28,26 @@ const closeForm = function () {
   // main.style.opacity = 100;
   console.log("hi");
 };
+const handleFeatures = function (e) {
+  section1.scrollIntoView({ behavior: "smooth" });
+};
 
 //Events
 openAccount.addEventListener("click", openForm);
 hiddenClose.addEventListener("mousehover", closeForm);
-learnMore.addEventListener("click", function (e) {
-  const s1coords = section1.getBoundingClientRect();
-  console.log(s1coords);
+learnMore.addEventListener("click", handleFeatures);
+features.addEventListener("click", handleFeatures);
 
-  console.log(e.target.getBoundingClientRect());
-
-  console.log("Current scroll (X/Y)", window.pageXOffset, window.pageYOffset);
-
-  console.log(
-    "height/width viewport",
-    document.documentElement.clientHeight,
-    document.documentElement.clientWidth
-  );
-
-  section1.scrollIntoView({ behavior: "smooth" });
+//scrolling part(image-load)
+const imgTargets = document.querySelectorAll("img[data-src]");
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+  entry.target.src = entry.target.dataset.src;
+};
+const imgObsever = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
 });
+imgTargets.forEach((img) => imgObsever.observe(img));
+
+
